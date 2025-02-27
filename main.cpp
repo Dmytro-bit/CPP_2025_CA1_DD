@@ -64,8 +64,14 @@ void loadData(vector<Transaction> &transactions) {
     }
 }
 
-
-
+int findTransaction(const vector<Transaction> &transactions, const string &credit_card) {
+    for (int i = 0; i < transactions.size(); i++) {
+        if (transactions[i].credit_card == credit_card) {
+            return i;
+        }
+    }
+    return -1;
+}
 
 
 int main() {
